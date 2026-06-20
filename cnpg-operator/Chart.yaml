@@ -1,0 +1,13 @@
+apiVersion: v2
+name: cnpg
+description: CloudNativePG Operator for PostgreSQL HA
+type: application
+version: 0.1.0
+appVersion: "0.28.2"
+
+# helm repo add cnpg https://cloudnative-pg.github.io/charts
+# helm dependency update .
+dependencies:
+  - name: cloudnative-pg
+    version: 0.28.2
+    repository: https://cloudnative-pg.github.io/charts

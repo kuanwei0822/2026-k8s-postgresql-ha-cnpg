@@ -1,0 +1,22 @@
+apiVersion: postgresql.cnpg.io/v1
+kind: Cluster
+metadata:
+  name: postgresql-ha
+  namespace: mynamespace
+spec:
+  instances: 3
+  imageName: ghcr.io/cloudnative-pg/postgresql:18.4-standard-trixie
+  storage:
+    size: 8Gi
+    storageClass: local-path
+  superuserSecret:
+    name: cnpg-superuser
+  bootstrap:
+    initdb:
+      database: mydatabase
+      owner: myowner
+      secret:
+        name: cnpg-app-user
+  postgresql:
+    parameters:
+      max_connections: "200"
