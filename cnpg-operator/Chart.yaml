@@ -3,7 +3,7 @@ name: cnpg
 description: CloudNativePG Operator for PostgreSQL HA
 type: application
 version: 0.1.0
-appVersion: "0.28.2"
+appVersion: "1.29.1"
 
 # helm repo add cnpg https://cloudnative-pg.github.io/charts
 # helm dependency update .
