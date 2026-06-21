@@ -43,6 +43,17 @@ K8s 物件分為兩類定義 :
 
 - 可以自行決定，這邊使用已經有的 local-path 本地路徑儲存。
 
+### 版本資訊：
+
+cluster.yaml 的 PostgreSQL 資料庫版本 :
+
+- PostgreSQL images 版本 ghcr.io/cloudnative-pg/postgresql:18.4-standard-trixie (目前最新穩定版)
+
+Chart.yaml 版本
+
+- Chart 版本 0.28.2 (目前最新穩定版)
+- Operator images 版本 ghcr.io/cloudnative-pg/cloudnative-pg:1.29.1 (目前最新穩定版)
+
 # 功能實作
 
 ### 第一步 : 安裝 CNPG 的 Operator
